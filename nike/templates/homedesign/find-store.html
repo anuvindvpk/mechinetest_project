@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Store</title>
+    <style>
+        /* header */
+         #navbar-1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .logo{
+            height: 40px;
+            width: 40px;
+        }
+        #links a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        #navbar-2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .logo-2{
+            height: 20px;
+            width: 20px;
+            margin-left: 10px;
+             
+        }
+        #navbar-2-logo, #navbar-2-links, #search-links{
+            width: 33%;
+
+        }
+        #navbar-2-links a{
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: larger;
+        }
+        #search-links{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #search{
+            height: 20px;
+            border-radius: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: larger;
+            
+        }
+
+        #store-search {
+            
+            
+            display: flex;
+            height: 20px;
+            width: 100%;
+            border-radius: 5px;
+            padding: 15px 10px 15px 10px;
+            font-size: larger;
+            border: 1px solid black;
+
+        }
+
+        #store-search-bar {
+            margin-top: 10px;
+            width: 98%;
+        }
+        #map{
+            width: 100%;
+            margin-top: 20px;
+        }
+
+
+        /* footer */
+        #footer-box-2{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+        #box-1{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+
+        }
+        #box-2 img{
+            margin: 0 10px;
+            width: 30px;
+        }
+        .grey{
+            font-size: small;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div id="navbar-1">
+        <img src="{% static 'images/nike_logo_1.png' %}" alt="" class="logo">
+    <div id="links">
+        <a href="{% url 'nike:find-store' %}">Find a Store |</a>
+        <a href="{% url 'nike:help' %}">Help |</a>
+        <a href="{% url 'nike:join-us' %}">Join us |</a>
+        <a href="{% url 'nike:sign-in' %}">Sign In</a>
+    </div>
+</div>
+<div id="navbar-2">
+    <div id="navbar-2-logo">
+        <a href="{% url 'nike:index' %}"><img src="{% static 'images/nike_logo_2.png' %}" alt="" class="logo">
+        </div></a>
+    <div id="navbar-2-links">
+        <a href="">Men</a>
+        <a href="">Women</a>
+        <a href="">Kids</a>
+        <a href="">Sales</a>
+        <a href="">SNKS</a>
+    </div>
+    <div id="search-links">
+        <input type="text" id="search" placeholder="Search">
+        <img src="{% static 'images/icon-1.png' %}" class="logo-2">
+        <img src="{% static 'images/icon-2.png' %}" class="logo-2">
+    </div>
+</div>
+    
+<div id="side-head">
+    <h2>Find a Nike Store</h2>
+
+</div>
+<div id="store-search-bar">
+    <input type="text" id="store-search" placeholder="Search Location">
+</div>
+<div>
+    <img src="{% static 'images/map-1.png' %}" id="map">
+</div>
+
+<!-- <img src="{% static 'images/map.png' %}"> -->
+
+
+
+<!-- footer -->
+
+<div id="footer-box-2">
+    <div id="box-1">
+        <div>
+            <h4>Find a Store</h4>
+            <h4>Become a Member</h4>
+            <h4>Sign Up</h4>
+            <h4>Student Discount</h4>
+            <h4>Send us Feedback</h4>
+        </div>
+        <div>
+            <h4>Get Help</h4>
+            <p class="grey">Order Status</p>
+            <p class="grey">Delivery</p>
+            <p class="grey">Returns</p>
+            <p class="grey">Payment Options</p>
+        </div>
+        <div>
+            <h4>About Nike</h4>
+            <p class="grey">News</p>
+            <p class="grey">Careers</p>
+            <p class="grey">Inverstors</p>
+            <p class="grey">Sustainability</p>
+        </div>
+    </div>
+    <div id="box-2">
+        <img src="{% static 'images/instagram.png' %}">
+        <img src="{% static 'images/facebook.png' %}">
+        <img src="{% static 'images/twitter.png' %}">
+    </div>
+</div>
+
+</body>
+</html>
